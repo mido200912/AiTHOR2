@@ -22,7 +22,7 @@ app.use("/api/projects", projectRoutes);
 app.use("/api/company", companyRoutes);
 app.use("/api/public", publicCompanyChat);
 mongoose
-  .connect(process.env.MONGO_URI)
+  .connect(process.env.MONGO_URI||"mongodb+srv://aismart:mido927010@cluster0.k3yeysv.mongodb.net/?retryWrites=true&w=majority&appName=Cluster0")
   .then(() => console.log("MongoDB connected"))
   .catch(err => console.log(err));
 
