@@ -35,7 +35,7 @@ router.post("/chat", async (req, res) => {
       },
       {
         headers: {
-          Authorization: `Bearer ${process.env.OPENROUTER_API_KEY}`,
+          Authorization: `Bearer ${process.env.OPENROUTER_API_KEY||"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"}`,
           "Content-Type": "application/json",
         },
       }
