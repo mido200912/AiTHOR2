@@ -12,7 +12,11 @@ import publicCompanyChat from "./routes/publicCompanyChat.js";
 dotenv.config();
 const app = express();
 
-app.use(cors());
+// CORS: فقط للفرونت اند
+app.use(cors({
+  origin: "https://aithor2.vercel.app", // ضع هنا URL الفرونت اند أو قائمة إذا كان متعدد
+  credentials: true
+}));
 app.use(express.json());
 
 // Routes
